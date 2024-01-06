@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://ricardohsmello:**@cluster0.ols7ffa.mongodb.net/caixa
+      uri: {uri}
       database: caixa
       collection:
         financing: financing
