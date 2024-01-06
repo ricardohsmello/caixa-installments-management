@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://ricardohsmello:ricasproject@cluster0.ols7ffa.mongodb.net/caixa
+      database: caixa
+      collection:
+        financing: financing
+        installments: installments
