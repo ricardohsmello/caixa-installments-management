@@ -13,15 +13,19 @@ data class InstallmentDocument(
     val id: ObjectId?,
     @Field("nro_contrato")
     val nroContrato: String,
+    @Field("due_date")
     val dueDate: Date,
     val paid: Boolean,
     val amount: Double,
     val interest: Double,
     val insurance: Double,
     val fees: Int,
+    @Field("outstanding_balance")
     val outstandingBalance: Double,
+    @Field("monetary_correction")
     val monetaryCorrection: Double,
     val amortization: Double,
+    @Field("is_contribution")
     val isContribution: Boolean
 ) {
     companion object {
