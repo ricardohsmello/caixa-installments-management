@@ -5,18 +5,19 @@ import org.springframework.context.annotation.Configuration
 
 @Configuration
 class MongoDB {
-    @Value("\${spring.data.mongodb.collection.financing}")
-    private val financingCollection: String? = null
 
-    @Value("\${spring.data.mongodb.collection.installments}")
-    private val installmentsCollection: String? = null
+    @Value("\${username}")
+    lateinit var username: String
 
-    fun getFinancingCollection(): String? {
-        return financingCollection
-    }
+    @Value("\${password}")
+    lateinit var password: String
 
-    fun getInstallmentsCollection(): String? {
-        return installmentsCollection
-    }
+    @Value("\${cluster}")
+    lateinit var cluster: String
+
+    @Value("\${database}")
+    lateinit var database: String
+
+
 
 }
