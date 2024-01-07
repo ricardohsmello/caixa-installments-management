@@ -1,8 +1,4 @@
 spring:
   data:
     mongodb:
-      uri: {uri}
-      database: caixa
-      collection:
-        financing: financing
-        installments: installments
+      uri: mongodb+srv://${username}:${password}@${cluster}/${database}
