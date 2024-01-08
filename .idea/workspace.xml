@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="092607e6-3645-4b7b-8258-40172be678e6" name="Changes" comment="refactor application">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.5/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/environments.hom.var" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/environments.local.var" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/ricas/caixa/CaixaApplication.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/ricas/caixa/application/api/request/InstallmentRequest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/ricas/caixa/application/api/rest/InstallmentsController.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/ricas/caixa/application/config/MongoDB.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/ricas/caixa/domain/entity/InstallmentDocument.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/ricas/caixa/domain/service/InstallmentsService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/ricas/caixa/domain/service/impl/InstallmentsServiceImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/ricas/caixa/infrastructure/logging/RicasLog.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/ricas/caixa/infrastructure/repository/mongo/InstallmentsRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/br/com/ricas/caixa/CaixaApplicationTests.kt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="caixa" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2abD6322EsaQBykA9gtlSJ1lDhp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Ricardo/Documents/projects/github/caixa-installments-management/environments.hom.var",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ricardo\Documents\projects\caixa\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ricardo\Documents\projects\github\caixa-installments-management" />
+      <recent name="C:\Users\Ricardo\Documents\projects\github\caixa-installments-management\src\main\kotlin\br\com\ricas\caixa\infrastructure\logging" />
+      <recent name="C:\Users\Ricardo\Documents\projects\github\caixa-installments-management\src\main\kotlin\br\com\ricas\caixa\infrastructure\" />
+      <recent name="C:\Users\Ricardo\Documents\projects\github\caixa-installments-management\src\main\kotlin\br\com\ricas\caixa\infrastructure\repository" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="br.com.ricas.caixa.infrastructure.repository.mongo" />
+      <recent name="br.com.ricas.caixa.infrastructure.repository" />
+      <recent name="br.com.ricas.caixa.domain.entity" />
+      <recent name="br.com.ricas.caixa.application.api.rest" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="br.com.ricas.caixa.application.api.request" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CaixaApplicationKt" type="JetRunConfigurationType" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.ricas.caixa.CaixaApplicationKt" />
+      <module name="caixa.main" />
+      <shortenClasspath name="NONE" />
+      <option name="VM_PARAMETERS" value="-Durl=mongodb+srv://ricardohsmello:ricasproject@cluster0.ols7ffa.mongodb.net/caixa" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+          <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH="environments.local.var" />
+          <ENTRY IS_ENABLED="false" PARSER="env" IS_EXECUTABLE="false" PATH="environments.hom.var" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="092607e6-3645-4b7b-8258-40172be678e6" name="Changes" comment="" />
+      <created>1704578205946</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704578205946</updated>
+    </task>
+    <task id="LOCAL-00001" summary="adjusting fields name">
+      <created>1704581443454</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704581443454</updated>
+    </task>
+    <task id="LOCAL-00002" summary="adding kapt to manage annotation process">
+      <option name="closed" value="true" />
+      <created>1704586160562</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704586160562</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Installment repository">
+      <option name="closed" value="true" />
+      <created>1704586200365</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704586200365</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added RicasLog annotation and usage">
+      <option name="closed" value="true" />
+      <created>1704586226444</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704586226444</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added git ignore">
+      <option name="closed" value="true" />
+      <created>1704586326306</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704586326306</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adjusting git ignore">
+      <option name="closed" value="true" />
+      <created>1704586397332</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1704586397332</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Adjusting application yml">
+      <option name="closed" value="true" />
+      <created>1704587634346</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1704587634346</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Adjusting MongoDB configuration">
+      <option name="closed" value="true" />
+      <created>1704587648018</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704587648018</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Adjusting Readme">
+      <option name="closed" value="true" />
+      <created>1704587652864</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1704587652864</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added docker-compose">
+      <option name="closed" value="true" />
+      <created>1704668276573</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1704668276573</updated>
+    </task>
+    <task id="LOCAL-00011" summary="creating environments to run local and hom">
+      <option name="closed" value="true" />
+      <created>1704754175717</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1704754175717</updated>
+    </task>
+    <task id="LOCAL-00012" summary="creating environments to run at hom">
+      <option name="closed" value="true" />
+      <created>1704754185328</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1704754185328</updated>
+    </task>
+    <task id="LOCAL-00013" summary="creating environments to run local">
+      <option name="closed" value="true" />
+      <created>1704754191764</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1704754191764</updated>
+    </task>
+    <task id="LOCAL-00014" summary="refactor application">
+      <option name="closed" value="true" />
+      <created>1704754204655</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1704754204655</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactor application">
+      <option name="closed" value="true" />
+      <created>1704754220610</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1704754220610</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adjusting fields name" />
+    <MESSAGE value="adding kapt to manage annotation process" />
+    <MESSAGE value="Installment repository" />
+    <MESSAGE value="Added RicasLog annotation and usage" />
+    <MESSAGE value="Added git ignore" />
+    <MESSAGE value="Adjusting git ignore" />
+    <MESSAGE value="Adjusting application yml" />
+    <MESSAGE value="Adjusting MongoDB configuration" />
+    <MESSAGE value="Adjusting Readme" />
+    <MESSAGE value="added docker-compose" />
+    <MESSAGE value="creating environments to run local and hom" />
+    <MESSAGE value="creating environments to run at hom" />
+    <MESSAGE value="creating environments to run local" />
+    <MESSAGE value="refactor application" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor application" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/caixa$CaixaApplicationKt.ic" NAME="CaixaApplicationKt Coverage Results" MODIFIED="1704725247592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
