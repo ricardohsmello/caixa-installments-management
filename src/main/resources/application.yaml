@@ -1,4 +1,5 @@
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://${username}:${password}@${cluster}/${database}
+      uri: ${MONGO_URL}
+
