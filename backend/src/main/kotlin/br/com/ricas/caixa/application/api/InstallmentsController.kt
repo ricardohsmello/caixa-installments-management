@@ -1,15 +1,13 @@
-package br.com.ricas.caixa.application.api.rest
+package br.com.ricas.caixa.application.api
 
 import br.com.ricas.caixa.application.api.request.InstallmentRequest
+import br.com.ricas.caixa.application.api.response.InstallmentResponse
 import br.com.ricas.caixa.domain.entity.InstallmentDocument
 import br.com.ricas.caixa.domain.service.InstallmentsService
 import br.com.ricas.caixa.infrastructure.logging.RicasLog
 import br.com.ricas.caixa.infrastructure.logging.logger
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("api/installments")
@@ -17,13 +15,20 @@ import org.springframework.web.bind.annotation.RestController
 class InstallmentsController(
     private val installmentsService: InstallmentsService
 ) {
-    @PostMapping("/create")
-    fun create(@RequestBody installmentRequest: InstallmentRequest) : ResponseEntity<String> {
+    @CrossOrigin(origins = ["http://localhost:4200"])
+    @PostMapping
+    fun create(@RequestBody installmentRequest: InstallmentRequest) : ResponseEntity<InstallmentResponse> {
         logger().info(
             "Starting create installment with: $installmentRequest"
         )
 
         val installment = installmentsService.create(InstallmentDocument.toDomain(installmentRequest))
-        return ResponseEntity.ok("Installment created with id: ${installment.id}")
+        return ResponseEntity.ok(installment.toResponse())
+    }
+
+    @GetMapping
+    fun findAll(): List<InstallmentResponse> {
+        return installmentsService.findAll().map { it.toResponse()
+        }
     }
 }
