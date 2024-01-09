@@ -1,0 +1,49 @@
+<!-- installments.component.html -->
+
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title">Create Installment</h2>
+    <!-- Your installment creation form goes here -->
+    <button class="btn btn-primary mt-3" (click)="openInstallmentsDialog()">Create New Installment</button>
+  </div>
+</div>
+
+<div class="card mt-3">
+  <div class="card-body">
+    <h2 class="card-title">Installments List</h2>
+
+    <!-- Installments Table List -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Contract</th>
+          <th>Due Date</th>
+          <th>Paid</th>
+          <th>Amount</th>
+          <th>Interest</th>
+          <th>Insurance</th>
+          <th>Fees</th>
+          <th>Outstanding Balance</th>
+          <th>Monetary Correction</th>
+          <th>Amortization</th>
+          <th>Is Contribution</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let installment of installments">
+          <td>{{ installment.nroContrato }}</td>
+          <td>{{ installment.dueDate | date:'short' }}</td>
+          <td>{{ installment.paid }}</td>
+          <td>{{ installment.amount | currency }}</td>
+          <td>{{ installment.interest | currency }}</td>
+          <td>{{ installment.insurance | currency }}</td>
+          <td>{{ installment.fees }}</td>
+          <td>{{ installment.outstandingBalance | currency }}</td>
+          <td>{{ installment.monetaryCorrection | currency }}</td>
+          <td>{{ installment.amortization | currency }}</td>
+          <td>{{ installment.isContribution }}</td>
+         </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
