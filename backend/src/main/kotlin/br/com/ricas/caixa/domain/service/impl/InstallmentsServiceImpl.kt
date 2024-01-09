@@ -11,4 +11,7 @@ class InstallmentsServiceImpl(
 ) : InstallmentsService {
     override fun create(installmentDocument: InstallmentDocument): InstallmentDocument =
         installmentsRepository.save(installmentDocument)
+
+    override fun findAll(): List<InstallmentDocument> =
+        installmentsRepository.findAll()
 }
