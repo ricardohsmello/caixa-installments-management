@@ -1,6 +1,7 @@
 package br.com.ricas.caixa.domain.entity
 
 import br.com.ricas.caixa.application.api.request.InstallmentRequest
+import br.com.ricas.caixa.application.api.response.InstallmentResponse
 import org.bson.types.ObjectId
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
@@ -45,5 +46,22 @@ data class InstallmentDocument(
                 isContribution = installmentRequest.isContribution
             )
         }
+
+    }
+
+    fun toResponse(): InstallmentResponse {
+        return InstallmentResponse(
+            nroContrato = nroContrato,
+            dueDate = dueDate,
+            paid = paid,
+            amount = amount,
+            interest = interest,
+            insurance = insurance,
+            fees = fees,
+            outstandingBalance = outstandingBalance,
+            monetaryCorrection = monetaryCorrection,
+            amortization = amortization,
+            isContribution = isContribution
+        )
     }
 }
