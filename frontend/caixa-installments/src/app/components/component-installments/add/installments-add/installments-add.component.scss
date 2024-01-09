@@ -1,21 +1,21 @@
 .form {
     width: auto;
-    margin: 10px;
-}
-
-
-.field-contract {
-    align-items: center;
-    margin: 10px;
-}
-
-.field-amount {
-    width: 400px;
-    margin: 5px;
-}
-
- 
-.buttons {
-    align-items: center;
-    margin: 10px;
-}
+    margin: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-field {
+    width: calc(50% - 10px); /* Adjust the width as needed */
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  

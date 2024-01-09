@@ -42,6 +42,9 @@
           <td>{{ installment.monetaryCorrection | currency }}</td>
           <td>{{ installment.amortization | currency }}</td>
           <td>{{ installment.isContribution }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteInstallment(installment.id)">Delete</button>
+          </td>
          </tr>
       </tbody>
     </table>

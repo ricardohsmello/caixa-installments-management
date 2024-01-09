@@ -28,6 +28,10 @@ export class InstallmentsComponent  {
     });
   }
 
+  deleteInstallment(id?: string) {
+    this.installmentService.delete(id)
+  }
+
 
   public openInstallmentsDialog() {
     const dialogRef = this.dialog.open(InstallmentsAddComponent, {

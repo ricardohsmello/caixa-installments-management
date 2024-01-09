@@ -1,4 +1,5 @@
 export class Installment {
+    id?: string;
     nroContrato?: string;
     dueDate?: Date;
     paid?: boolean;
@@ -16,6 +17,7 @@ export class Installment {
     }
 
     private convertAndAssign(data: any): void {
+        this.id = data.id,
         this.nroContrato = data.nroContrato;
         this.dueDate = new Date(data.dueDate);
         this.paid = data.paid === 'true';  
