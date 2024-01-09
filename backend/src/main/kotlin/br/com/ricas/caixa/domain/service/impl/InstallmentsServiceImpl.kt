@@ -14,4 +14,8 @@ class InstallmentsServiceImpl(
 
     override fun findAll(): List<InstallmentDocument> =
         installmentsRepository.findAll()
+
+    override fun delete(id: String) {
+        installmentsRepository.deleteById(id)
+    }
 }
