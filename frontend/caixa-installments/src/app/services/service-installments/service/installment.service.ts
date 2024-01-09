@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, catchError, throwError } from 'rxjs';
 import { Installment } from '../../../models/installments';
   
 
@@ -26,13 +26,24 @@ export class InstallmentService {
     return this.http.post<Installment>(this.installmentUrl, installment);
   }
 
-  delete(id?: string) {
+  // delete(id?: string) {
+  //   const url = `${this.installmentUrl}/${id}`;
+
+  //   this.http.delete(url)
+  //   .subscribe(() => this.status = 'Delete successful');
+    
+  // }
+
+  delete(id?: string): Observable<void> {
     const url = `${this.installmentUrl}/${id}`;
 
-    this.http.delete(url)
-    .subscribe(() => this.status = 'Delete successful');
-    
+    return this.http.delete<void>(url)
+      .pipe(
+        catchError(error => {
+          console.error('Error deleting installment:', error);
+          return throwError(error);
+        })
+      );
   }
-
 
 }

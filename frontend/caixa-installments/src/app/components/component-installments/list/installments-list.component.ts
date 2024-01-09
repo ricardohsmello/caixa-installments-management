@@ -1,9 +1,12 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { InstallmentService } from '../../../services/service-installments/service/installment.service';
 import { Installment } from '../../../models/installments';
-import { MatDialog } from '@angular/material/dialog';
 import { InstallmentsAddComponent } from '../add/installments-add/installments-add.component';
-// import { InstallmentDialogComponent } from './installments.dialog.component';
+
+import {
+  MatDialog
+} from '@angular/material/dialog';
+import { ComponentDialogConfirmComponent } from '../../component-dialog-confirm/component-dialog-confirm.component';
 
 @Component({
   selector: 'app-installments',
@@ -18,28 +21,25 @@ export class InstallmentsComponent  {
   constructor(
     private installmentService: InstallmentService,
     public dialog: MatDialog,
-    private cdr: ChangeDetectorRef
     ) {
   }
+
 
   async ngOnInit() {
       this.installmentService.findAll().subscribe(data => {
       this.installments = data;
     });
   }
-
-  deleteInstallment(id?: string) {
-    this.installmentService.delete(id)
-  }
-
-
-  public openInstallmentsDialog() {
+ 
+  public openNewInstallmentDialog() {
     const dialogRef = this.dialog.open(InstallmentsAddComponent, {
       data: {installment: this.installment},
     })
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
+        console.log(result.nroContrato)
+
         this.installmentService.save(result).subscribe(savedInstallment => {
           if (this.installments !== undefined) {
              this.installments.push(savedInstallment);
@@ -49,6 +49,23 @@ export class InstallmentsComponent  {
       }
     });
   }
-}
 
+  openDialog(installmentId?: string) {
+    const dialogRef = this.dialog.open(ComponentDialogConfirmComponent, {
+    })
+
+    dialogRef.afterClosed().subscribe(result => {
+      
+      if (result) {
+        this.installmentService.delete(installmentId).subscribe(() => {
+          // Remove the deleted item from the installments array
+          this.installments = this.installments?.filter(inst => inst.id !== installmentId);
+        });
+      }
+    });
+  }
  
+  
+ 
+
+}

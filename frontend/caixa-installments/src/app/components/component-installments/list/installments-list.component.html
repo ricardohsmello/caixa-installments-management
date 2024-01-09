@@ -4,7 +4,7 @@
   <div class="card-body">
     <h2 class="card-title">Create Installment</h2>
     <!-- Your installment creation form goes here -->
-    <button class="btn btn-primary mt-3" (click)="openInstallmentsDialog()">Create New Installment</button>
+    <button class="btn btn-primary mt-3" (click)="openNewInstallmentDialog()">Create New Installment</button>
   </div>
 </div>
 
@@ -42,8 +42,10 @@
           <td>{{ installment.monetaryCorrection | currency }}</td>
           <td>{{ installment.amortization | currency }}</td>
           <td>{{ installment.isContribution }}</td>
+          <!-- <button mat-raised-button (click)="openDialog('installment.id')">Open dialog without animation</button> -->
+
           <td>
-            <button class="btn btn-danger" (click)="deleteInstallment(installment.id)">Delete</button>
+            <button class="btn btn-danger" (click)="openDialog(installment.id)">Delete</button>
           </td>
          </tr>
       </tbody>

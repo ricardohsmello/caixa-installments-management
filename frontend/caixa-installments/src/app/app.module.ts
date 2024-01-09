@@ -8,20 +8,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InstallmentsComponent } from './components/component-installments/list/installments-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialog, MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { InstallmentsAddComponent } from './components/component-installments/add/installments-add/installments-add.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-
- import {MatIconModule} from '@angular/material/icon';
+   
+import {MatIconModule} from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
- import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule} from '@angular/material/core';
+import { ComponentDialogConfirmComponent } from './components/component-dialog-confirm/component-dialog-confirm.component';
+
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     AppComponent,
     InstallmentsComponent,
-    InstallmentsAddComponent
+    InstallmentsAddComponent,
+    ComponentDialogConfirmComponent
   ],
   imports: [
     BrowserModule,
