@@ -13,21 +13,21 @@ data class InstallmentDocument(
     @Id
     val id: ObjectId?,
     @Field("nro_contrato")
-    val nroContrato: String,
+    val nroContrato: String?,
     @Field("due_date")
-    val dueDate: Date,
-    val paid: Boolean,
-    val amount: Double,
-    val interest: Double,
-    val insurance: Double,
-    val fees: Int,
+    val dueDate: Date?,
+    val paid: Boolean?,
+    val amount: Double?,
+    val interest: Double?,
+    val insurance: Double?,
+    val fees: Int?,
     @Field("outstanding_balance")
-    val outstandingBalance: Double,
+    val outstandingBalance: Double?,
     @Field("monetary_correction")
-    val monetaryCorrection: Double,
-    val amortization: Double,
+    val monetaryCorrection: Double?,
+    val amortization: Double?,
     @Field("is_contribution")
-    val isContribution: Boolean
+    val isContribution: Boolean?
 ) {
     companion object {
         fun toDomain(installmentRequest: InstallmentRequest): InstallmentDocument {
