@@ -47,7 +47,6 @@ data class InstallmentDocument(
             )
         }
     }
-
     fun toResponse(): InstallmentResponse {
         return InstallmentResponse(
             id = id.toString(),
