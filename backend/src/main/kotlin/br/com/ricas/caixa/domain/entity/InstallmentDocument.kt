@@ -46,7 +46,6 @@ data class InstallmentDocument(
                 isContribution = installmentRequest.isContribution
             )
         }
-
     }
 
     fun toResponse(): InstallmentResponse {
