@@ -1,7 +1,6 @@
 # caixa-installments-management
 This is my personal project to manage my installments
 
-
 ## Built With
 - Java 17
 - Kotlin/Spring
