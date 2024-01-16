@@ -5,6 +5,7 @@ This is my personal project to manage my installments
 - Java 17
 - Kotlin/Spring
 - MongoDB
+- Angular
 
 ## Prerequisites
  - Java > 8
