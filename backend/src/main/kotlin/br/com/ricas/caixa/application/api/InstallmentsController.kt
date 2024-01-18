@@ -24,7 +24,6 @@ class InstallmentsController(
         val installment = installmentsService.create(InstallmentDocument.toDomain(installmentRequest))
         return ResponseEntity.ok(installment.toResponse())
     }
-
     @GetMapping
     fun findAll(): List<InstallmentResponse> {
         return installmentsService.findAll().map { it.toResponse()
