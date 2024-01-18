@@ -13,7 +13,6 @@ class Web : WebMvcConfigurer {
         registry.addMapping("/api/*")
             .allowedOrigins("http://localhost:4200")
             .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS"  )
-
             .allowCredentials(false).maxAge(3600)
     }
 }
