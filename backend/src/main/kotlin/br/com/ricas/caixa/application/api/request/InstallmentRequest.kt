@@ -2,7 +2,6 @@ package br.com.ricas.caixa.application.api.request
 
 import java.util.*
 
-
 data class InstallmentRequest(
     val nroContrato: String,
     val dueDate: Date,
