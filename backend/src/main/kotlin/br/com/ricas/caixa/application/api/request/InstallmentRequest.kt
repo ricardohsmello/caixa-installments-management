@@ -14,5 +14,3 @@ data class InstallmentRequest(
     val amortization: Double,
     val isContribution: Boolean
 )
-
-
