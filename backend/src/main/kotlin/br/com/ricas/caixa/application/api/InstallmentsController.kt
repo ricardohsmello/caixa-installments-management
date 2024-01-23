@@ -8,6 +8,7 @@ import br.com.ricas.caixa.infrastructure.logging.RicasLog
 import br.com.ricas.caixa.infrastructure.logging.logger
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
+
 @RestController
 @RequestMapping("api/installments")
 @RicasLog
