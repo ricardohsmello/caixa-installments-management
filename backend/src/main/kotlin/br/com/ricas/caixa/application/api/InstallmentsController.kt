@@ -30,6 +30,7 @@ class InstallmentsController(
         return installmentsService.findAll().map { it.toResponse()
         }
     }
+
     @CrossOrigin(origins = ["http://localhost:4200"])
     @DeleteMapping("{id}")
     fun deleteById(@PathVariable("id") id: String) {
