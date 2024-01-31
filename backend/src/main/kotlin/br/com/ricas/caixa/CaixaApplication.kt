@@ -8,3 +8,4 @@ class CaixaApplication
 fun main(args: Array<String>) {
 	runApplication<CaixaApplication>(*args)
 }
+
