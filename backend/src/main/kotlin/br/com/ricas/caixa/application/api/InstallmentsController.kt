@@ -2,7 +2,7 @@ package br.com.ricas.caixa.application.api
 
 import br.com.ricas.caixa.application.api.request.InstallmentRequest
 import br.com.ricas.caixa.application.api.response.InstallmentResponse
-import br.com.ricas.caixa.domain.entity.InstallmentDocument
+import br.com.ricas.caixa.domain.entity.Installments
 import br.com.ricas.caixa.domain.service.InstallmentsService
 import br.com.ricas.caixa.infrastructure.logging.RicasLog
 import br.com.ricas.caixa.infrastructure.logging.logger
@@ -17,13 +17,13 @@ class InstallmentsController(
 ) {
     @CrossOrigin(origins = ["http://localhost:4200"])
     @PostMapping
-    fun create(@RequestBody installmentRequest: InstallmentRequest) : ResponseEntity<InstallmentResponse> {
+    fun create(@RequestBody installmentRequest: InstallmentRequest) : ResponseEntity<String> {
         logger().info(
             "Starting create installment with: $installmentRequest"
         )
 
-        val installment = installmentsService.create(InstallmentDocument.toDomain(installmentRequest))
-        return ResponseEntity.ok(installment.toResponse())
+        val installment = installmentsService.save(Installments.toDomain(installmentRequest))
+        return ResponseEntity.ok(installment)
     }
 
     @GetMapping
