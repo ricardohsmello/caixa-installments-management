@@ -4,10 +4,8 @@ import br.com.ricas.caixa.domain.InstallmentsPort
 import br.com.ricas.caixa.domain.entity.Installments
 import br.com.ricas.caixa.infrastructure.entity.InstallmentsEntity
 import com.mongodb.kotlin.client.MongoDatabase
-import org.bson.BSONObject
 import org.bson.BsonDocument
 import org.bson.BsonObjectId
-import org.bson.conversions.Bson
 import org.bson.types.ObjectId
 import org.springframework.stereotype.Repository
 
