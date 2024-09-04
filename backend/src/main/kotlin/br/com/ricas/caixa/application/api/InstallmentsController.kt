@@ -8,6 +8,8 @@ import br.com.ricas.caixa.infrastructure.logging.RicasLog
 import br.com.ricas.caixa.infrastructure.logging.logger
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
+import org.springframework.web.multipart.MultipartFile
+
 
 @RestController
 @RequestMapping("api/installments")
@@ -15,14 +17,27 @@ import org.springframework.web.bind.annotation.*
 class InstallmentsController(
     private val installmentsService: InstallmentsService
 ) {
+
+//    @CrossOrigin(origins = ["http://localhost:4200"])
+//    @PostMapping(consumes = ["multipart/form-data"])
+//    fun create(@RequestPart("installmentRequest") installmentRequest: InstallmentRequest,
+//               @RequestPart("file") file: MultipartFile) : ResponseEntity<String> {
+//        logger().info(
+//            "Starting create installment with: $installmentRequest"
+//        )
+//
+//        val installment = installmentsService.save(Installments.toDomain(installmentRequest))
+//        return ResponseEntity.ok(installment)
+//    }
+
     @CrossOrigin(origins = ["http://localhost:4200"])
-    @PostMapping
-    fun create(@RequestBody installmentRequest: InstallmentRequest) : ResponseEntity<String> {
+    @PostMapping(consumes = ["multipart/form-data"])
+    fun upload(@RequestPart("file") file: MultipartFile) : ResponseEntity<String> {
         logger().info(
-            "Starting create installment with: $installmentRequest"
+            "Starting upload installment "
         )
 
-        val installment = installmentsService.save(Installments.toDomain(installmentRequest))
+        val installment = installmentsService.upload(file)
         return ResponseEntity.ok(installment)
     }
 
