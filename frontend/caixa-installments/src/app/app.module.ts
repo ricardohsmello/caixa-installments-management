@@ -17,6 +17,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule} from '@angular/material/core';
 import { ComponentDialogConfirmComponent } from './components/component-dialog-confirm/component-dialog-confirm.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -42,6 +43,7 @@ import { ComponentDialogConfirmComponent } from './components/component-dialog-c
     MatDatepickerModule,
     MatNativeDateModule,
     MatIconModule,
+    NgbModule,
 
   ],
   providers: [
