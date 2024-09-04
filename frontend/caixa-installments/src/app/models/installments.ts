@@ -11,6 +11,7 @@ export class Installment {
     monetaryCorrection?: number;
     amortization?: number;
     isContribution?: boolean;
+    file?: File;
 
     constructor(data: any) {
         this.convertAndAssign(data);
@@ -29,5 +30,6 @@ export class Installment {
         this.monetaryCorrection = parseFloat(data.monetaryCorrection);
         this.amortization = parseFloat(data.amortization);
         this.isContribution = data.isContribution === 'true'; 
+        this.file = data.file;
     }
 }
