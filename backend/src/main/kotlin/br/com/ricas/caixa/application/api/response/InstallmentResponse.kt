@@ -2,7 +2,6 @@ package br.com.ricas.caixa.application.api.response
 
 import java.util.*
 data class InstallmentResponse(
-     val id: String?,
     val nroContrato: String?,
     val dueDate: Date?,
     val paid: Boolean?,
