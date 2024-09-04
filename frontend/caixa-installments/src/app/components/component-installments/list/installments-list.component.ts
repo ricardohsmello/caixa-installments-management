@@ -38,9 +38,17 @@ export class InstallmentsComponent  {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        console.log(result.nroContrato)
 
-        this.installmentService.save(result).subscribe(savedInstallment => {
+
+        const formData = new FormData();
+        // formData.append('installmentRequest', new Blob([JSON.stringify(result)], {
+        //   type: "application/json"
+        // }));
+        formData.append('file', result.file, result.file.name);
+
+
+
+        this.installmentService.save(formData).subscribe(savedInstallment => {
           if (this.installments !== undefined) {
              this.installments.push(savedInstallment);
           }
