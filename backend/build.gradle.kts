@@ -25,6 +25,7 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("log4j:log4j:1.2.17")
+ 	implementation("net.sourceforge.tess4j:tess4j:5.13.0")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 
 
