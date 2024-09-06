@@ -21,18 +21,11 @@ export class InstallmentService {
     return this.http.get<Installment[]>(this.installmentUrl);
   }
    
-  save(installment: Installment): Observable<Installment> {
-    console.log('- ' + installment.paid);
-    return this.http.post<Installment>(this.installmentUrl, installment);
+  save(formData: FormData): Observable<Installment> {
+    // console.log('- ' + installment.file);
+    return this.http.post<Installment>(this.installmentUrl, formData);
   }
-
-  // delete(id?: string) {
-  //   const url = `${this.installmentUrl}/${id}`;
-
-  //   this.http.delete(url)
-  //   .subscribe(() => this.status = 'Delete successful');
-    
-  // }
+ 
 
   delete(id?: string): Observable<void> {
     const url = `${this.installmentUrl}/${id}`;
@@ -44,6 +37,11 @@ export class InstallmentService {
           return throwError(error);
         })
       );
+  }
+
+  uploadImage(formData: FormData): Observable<any> {
+    const headers = new HttpHeaders(); 
+    return this.http.post(`${this.installmentUrl}/upload`, formData, { headers });
   }
 
 }
