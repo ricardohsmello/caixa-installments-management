@@ -1,8 +1,6 @@
 package br.com.ricas.caixa.application.api
 
-import br.com.ricas.caixa.application.api.request.InstallmentRequest
 import br.com.ricas.caixa.application.api.response.InstallmentResponse
-import br.com.ricas.caixa.domain.entity.Installments
 import br.com.ricas.caixa.domain.service.InstallmentsService
 import br.com.ricas.caixa.infrastructure.logging.RicasLog
 import br.com.ricas.caixa.infrastructure.logging.logger
@@ -16,7 +14,9 @@ import org.springframework.web.multipart.MultipartFile
 @RicasLog
 class InstallmentsController(
     private val installmentsService: InstallmentsService
+
 ) {
+
 
 //    @CrossOrigin(origins = ["http://localhost:4200"])
 //    @PostMapping(consumes = ["multipart/form-data"])
@@ -36,6 +36,8 @@ class InstallmentsController(
         logger().info(
             "Starting upload installment "
         )
+
+
 
         val installment = installmentsService.upload(file)
         return ResponseEntity.ok(installment)
