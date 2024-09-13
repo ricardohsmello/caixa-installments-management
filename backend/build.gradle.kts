@@ -14,21 +14,28 @@ version = "0.0.1-SNAPSHOT"
 java {
 	sourceCompatibility = JavaVersion.VERSION_17
 }
-
 repositories {
 	mavenCentral()
+	maven { url = uri("https://repo.spring.io/milestone") } // Add this if needed for Spring AI BOM
+	maven { url = uri("https://repo.spring.io/snapshot") }  // Add this if needed for Spring AI BOM
+}
+
+dependencyManagement {
+	imports {
+		mavenBom("org.springframework.ai:spring-ai-bom:1.0.0-SNAPSHOT")
+	}
 }
 
 dependencies {
+	implementation("org.springframework.ai:spring-ai-ollama-spring-boot-starter")
 	implementation("org.mongodb:mongodb-driver-kotlin-sync:5.1.1")
+
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("log4j:log4j:1.2.17")
  	implementation("net.sourceforge.tess4j:tess4j:5.13.0")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
-
-
 }
 
 tasks.withType<KotlinCompile> {
