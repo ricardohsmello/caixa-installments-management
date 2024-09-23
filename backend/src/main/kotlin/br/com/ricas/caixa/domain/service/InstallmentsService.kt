@@ -20,7 +20,6 @@ class InstallmentsService(
     private val chatClient: ChatClient
 )  {
 
-
     // TODO Refactor everything here.
 
     fun save(installment: Installments): String {
@@ -33,7 +32,6 @@ class InstallmentsService(
         tesseract.setDatapath("src/main/resources/tessdata")
 
         var saveResult = ""
-
         try {
 
             val tempFile = convertMultipartFileToFile(file)
@@ -48,7 +46,6 @@ class InstallmentsService(
             installmentsRepository.save(installment)
 
             tempFile.delete()
-
         } catch (e: TesseractException) {
             System.err.println("Error occurred while transcribing the image: " + e.message)
         } catch (e: Exception) {
