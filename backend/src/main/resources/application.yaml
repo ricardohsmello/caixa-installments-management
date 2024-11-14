@@ -7,3 +7,4 @@ spring:
     ollama:
       chat:
         model: 'llama3.1:8b'
+
