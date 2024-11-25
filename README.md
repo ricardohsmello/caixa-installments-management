@@ -8,7 +8,7 @@ This is my personal project to manage my installments
 - Angular
 
 ## Prerequisites
- - Java > 8
+ - Java+8
 
 ## Running
 
