@@ -32,7 +32,6 @@ class InstallmentsRepository(
 
         val filter = BsonDocument("_id", BsonObjectId(ObjectId(id)))
         collection.deleteOne(filter)
-
     }
 
 }
